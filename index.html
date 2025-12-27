@@ -3,60 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FERRECAMI19 | Ingeniería y Materiales de Construcción</title>
+<title>FERRECAMI19 | Ingeniería y Construcción</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --azul:#1e4ed8;
-  --negro:#020617;
-  --gris:#f1f5f9;
+  --azul:#1f3c88;
+  --negro:#1a1a1a;
+  --gris:#f4f6f8;
 }
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+  font-family:'Montserrat',sans-serif;
 }
 body{
-  color:#020617;
-  background:#fff;
+  background:var(--gris);
+  color:#1a1a1a;
 }
 
 /* HEADER */
 header{
-  height:100vh;
   background:
-  linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-  url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("https://images.unsplash.com/photo-1581091215367-59ab6b9b0d41");
+  background-size:cover;
+  background-position:center;
+  height:90vh;
   color:#fff;
 }
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:25px 10%;
+  padding:20px 8%;
+  background:rgba(0,0,0,.6);
 }
-nav h1{
-  font-size:28px;
-  font-weight:700;
+nav img{
+  height:55px;
 }
 nav a{
   color:#fff;
+  margin-left:25px;
   text-decoration:none;
-  margin-left:20px;
   font-weight:500;
 }
+
 .hero{
-  height:85%;
+  height:80%;
   display:flex;
   align-items:center;
-  padding:0 10%;
+  padding:0 8%;
 }
-.hero h2{
-  font-size:48px;
-  max-width:750px;
+.hero h1{
+  font-size:42px;
+  max-width:700px;
 }
 .hero p{
   margin:20px 0;
@@ -64,92 +67,72 @@ nav a{
 }
 .btn{
   background:var(--azul);
-  padding:15px 30px;
   color:#fff;
+  padding:14px 28px;
   text-decoration:none;
-  border-radius:6px;
   font-weight:600;
+  border-radius:4px;
 }
 
 /* SECCIONES */
 section{
-  padding:80px 10%;
+  padding:70px 8%;
+  background:#fff;
+  margin-bottom:25px;
 }
 .section-title{
-  font-size:36px;
-  margin-bottom:40px;
-  border-left:6px solid var(--azul);
+  font-size:30px;
+  margin-bottom:30px;
+  border-left:5px solid var(--azul);
   padding-left:15px;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 .card{
   background:var(--gris);
-  padding:30px;
-  border-radius:12px;
-}
-.card h3{
-  margin-bottom:10px;
+  padding:25px;
+  border-radius:6px;
 }
 
 /* GALERIA */
 .galeria{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 .galeria img{
   width:100%;
-  height:220px;
+  height:200px;
   object-fit:cover;
-  border-radius:12px;
-  transition:transform .4s;
-}
-.galeria img:hover{
-  transform:scale(1.05);
+  border-radius:6px;
 }
 
-/* FORMULARIO */
-.formulario{
+/* CONTACTO */
+.contacto-box{
   background:var(--negro);
+  color:#fff;
   padding:40px;
-  border-radius:12px;
-  color:#fff;
-}
-form{
-  display:grid;
-  gap:15px;
-}
-input, textarea{
-  padding:14px;
-  border:none;
   border-radius:6px;
 }
-button{
-  background:var(--azul);
-  border:none;
-  padding:15px;
-  color:#fff;
+.contacto-box a{
+  display:inline-block;
+  margin-top:15px;
+  color:#38bdf8;
+  text-decoration:none;
   font-weight:600;
-  border-radius:6px;
-  cursor:pointer;
 }
 
 /* FOOTER */
 footer{
-  background:#020617;
-  color:#fff;
+  background:#111;
+  color:#ccc;
   text-align:center;
-  padding:30px;
-}
-footer a{
-  color:#38bdf8;
-  text-decoration:none;
+  padding:25px;
 }
 </style>
 </head>
@@ -158,93 +141,66 @@ footer a{
 
 <header>
 <nav>
-<h1>FERRECAMI19</h1>
+<img src="img/logo-ferrecami19.png" alt="FERRECAMI19">
 <div>
 <a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
-<a href="#galeria">Obras</a>
+<a href="#obras">Obras</a>
 <a href="#contacto">Contacto</a>
 </div>
 </nav>
 
 <div class="hero">
 <div>
-<h2>Ingeniería, Construcción y Materiales de Alto Nivel</h2>
-<p>Especialistas en proyectos de pequeña y gran escala, remodelaciones, construcción y suministro mayorista de materiales con alcance nacional.</p>
-<a href="#cotizacion" class="btn">Solicitar Cotización</a>
+<h1>Soluciones en Construcción y Materiales para Proyectos Reales</h1>
+<p>FERRECAMI19 es una empresa venezolana especializada en materiales de construcción, obras civiles y remodelaciones de pequeña y mediana escala con alcance nacional.</p>
+<a href="#contacto" class="btn">Contáctanos</a>
 </div>
 </div>
 </header>
 
 <section id="nosotros">
 <h2 class="section-title">Quiénes Somos</h2>
-<p><strong>FERRECAMI19</strong> es una empresa ubicada en Barquisimeto, Estado Lara, dedicada a la venta de materiales de ferretería y construcción al mayor, así como al desarrollo de proyectos de ingeniería, remodelaciones y construcción de espacios pequeños y grandes a nivel nacional.</p>
+<p>FERRECAMI19 opera desde Barquisimeto, Estado Lara, ofreciendo soluciones reales para la construcción latinoamericana: viviendas, remodelaciones, espacios recreativos y suministro de materiales al mayor.</p>
 </section>
 
 <section id="servicios">
-<h2 class="section-title">Nuestros Servicios</h2>
+<h2 class="section-title">Servicios</h2>
 <div class="grid">
-<div class="card">
-<h3>Ingeniería y Construcción</h3>
-<p>Planificación y ejecución de obras civiles de pequeña y gran escala.</p>
-</div>
-<div class="card">
-<h3>Remodelaciones</h3>
-<p>Transformación de espacios residenciales, comerciales e industriales.</p>
-</div>
-<div class="card">
-<h3>Suministro Mayorista</h3>
-<p>Venta y distribución de materiales de construcción para proyectos nacionales.</p>
-</div>
+<div class="card">Construcción de viviendas y espacios comerciales</div>
+<div class="card">Remodelaciones y adecuaciones</div>
+<div class="card">Suministro de materiales de ferretería</div>
 </div>
 </section>
 
-<section id="galeria">
+<section id="obras">
 <h2 class="section-title">Obras y Proyectos</h2>
 <div class="galeria">
-<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
-<img src="https://images.unsplash.com/photo-1590650046871-92c887180603">
-<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-<img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c">
-<img src="https://images.unsplash.com/photo-1590608897129-79da98d159ab">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-</div>
-</section>
-
-<section id="materiales">
-<h2 class="section-title">Materiales que Comercializamos</h2>
-<ul>
-<li>Cemento</li>
-<li>Bloques</li>
-<li>Cabillas</li>
-<li>Tubos estructurales</li>
-<li>Pego y Mantoflex</li>
-<li>Arena y agregados</li>
-</ul>
-</section>
-
-<section id="cotizacion">
-<h2 class="section-title">Solicitar Cotización</h2>
-<div class="formulario">
-<form>
-<input type="text" placeholder="Nombre completo" required>
-<input type="email" placeholder="Correo electrónico" required>
-<textarea rows="5" placeholder="Describe tu proyecto o materiales requeridos"></textarea>
-<button>Enviar Solicitud</button>
-</form>
+<img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c">
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+<img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1">
+<img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da">
 </div>
 </section>
 
 <section id="contacto">
 <h2 class="section-title">Contacto</h2>
+<div class="contacto-box">
 <p>📍 Barquisimeto, Estado Lara – Venezuela</p>
 <p>📧 ferrecami19@outlook.com</p>
-<p>📸 Instagram: <a href="https://www.instagram.com/ferrecami.19/" target="_blank">@ferrecami.19</a></p>
+
+<a href="mailto:ferrecami19@outlook.com">✉ Escríbenos por correo</a><br>
+<a href="https://www.instagram.com/ferrecami.19/" target="_blank">📸 Síguenos en Instagram</a>
+</div>
 </section>
 
 <footer>
-<p>© 2025 FERRECAMI19 | Ingeniería Corporativa y Materiales de Construcción</p>
+<p>© 2025 FERRECAMI19 – Ingeniería y Construcción</p>
 </footer>
 
 </body>
 </html>
+
+</body>
+</html>
+
