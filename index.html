@@ -1,250 +1,311 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FERRECAMI19 | Ingeniería y Materiales de Construcción</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamarindo Cell | Equipos Apple en Barquisimeto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            scroll-behavior: smooth;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        .logo-branding-bar {
+            background-color: #ffffff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #f3f3f3;
+        }
 
-<style>
-:root{
-  --azul:#1e4ed8;
-  --negro:#020617;
-  --gris:#f1f5f9;
-}
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-body{
-  color:#020617;
-  background:#fff;
-}
+        .main-brand-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
 
-/* HEADER */
-header{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-  url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
-  color:#fff;
-}
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:25px 10%;
-}
-nav h1{
-  font-size:28px;
-  font-weight:700;
-}
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:20px;
-  font-weight:500;
-}
-.hero{
-  height:85%;
-  display:flex;
-  align-items:center;
-  padding:0 10%;
-}
-.hero h2{
-  font-size:48px;
-  max-width:750px;
-}
-.hero p{
-  margin:20px 0;
-  max-width:600px;
-}
-.btn{
-  background:var(--azul);
-  padding:15px 30px;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:600;
-}
+        .announcement-bar {
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 10px;
+            padding: 10px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
 
-/* SECCIONES */
-section{
-  padding:80px 10%;
-}
-.section-title{
-  font-size:36px;
-  margin-bottom:40px;
-  border-left:6px solid var(--azul);
-  padding-left:15px;
-}
+        .apple-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-.card{
-  background:var(--gris);
-  padding:30px;
-  border-radius:12px;
-}
-.card h3{
-  margin-bottom:10px;
-}
+        .logo-text-styled {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            text-transform: lowercase;
+            font-size: 1.2rem;
+            color: #000;
+        }
 
-/* GALERIA */
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-.galeria img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:12px;
-  transition:transform .4s;
-}
-.galeria img:hover{
-  transform:scale(1.05);
-}
+        .hero-title {
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
 
-/* FORMULARIO */
-.formulario{
-  background:var(--negro);
-  padding:40px;
-  border-radius:12px;
-  color:#fff;
-}
-form{
-  display:grid;
-  gap:15px;
-}
-input, textarea{
-  padding:14px;
-  border:none;
-  border-radius:6px;
-}
-button{
-  background:var(--azul);
-  border:none;
-  padding:15px;
-  color:#fff;
-  font-weight:600;
-  border-radius:6px;
-  cursor:pointer;
-}
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3.2rem; }
+        }
 
-/* FOOTER */
-footer{
-  background:#020617;
-  color:#fff;
-  text-align:center;
-  padding:30px;
-}
-footer a{
-  color:#38bdf8;
-  text-decoration:none;
-}
-</style>
+        .product-card {
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid #efefef;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+        }
+
+        .btn-primary {
+            background: #000000;
+            color: #ffffff;
+            padding: 20px 36px;
+            border-radius: 18px;
+            font-weight: 700;
+            text-align: center;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn-whatsapp-direct {
+            background-color: #25D366;
+            color: white;
+            padding: 18px 32px;
+            border-radius: 16px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-whatsapp-direct:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+            background-color: #20ba5a;
+        }
+
+        .img-container {
+            position: relative;
+            background-color: #f5f5f7;
+            overflow: hidden;
+        }
+
+        .product-img, .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .badge-trust {
+            background: #f4f4f5;
+            color: #18181b;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .whatsapp-nav-btn {
+            background-color: #25D366;
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.3rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<nav>
-<h1>FERRECAMI19</h1>
-<div>
-<a href="#nosotros">Nosotros</a>
-<a href="#servicios">Servicios</a>
-<a href="#galeria">Obras</a>
-<a href="#contacto">Contacto</a>
-</div>
-</nav>
+    <!-- Logotipo principal -->
+    <div class="logo-branding-bar">
+        <img src="https://i.postimg.cc/KKhsvW18/Whats-App-Image-2026-02-24-at-12-29-39-PM.jpg" alt="[Logotipo de Tamarindo Cell]" class="main-brand-logo">
+    </div>
 
-<div class="hero">
-<div>
-<h2>Ingeniería, Construcción y Materiales de Alto Nivel</h2>
-<p>Especialistas en proyectos de pequeña y gran escala, remodelaciones, construcción y suministro mayorista de materiales con alcance nacional.</p>
-<a href="#cotizacion" class="btn">Solicitar Cotización</a>
-</div>
-</div>
-</header>
+    <!-- Barra de anuncios -->
+    <div class="announcement-bar">
+        📦 Envíos a toda Venezuela • Delivery en Barquisimeto y Cabudare
+    </div>
 
-<section id="nosotros">
-<h2 class="section-title">Quiénes Somos</h2>
-<p><strong>FERRECAMI19</strong> es una empresa ubicada en Barquisimeto, Estado Lara, dedicada a la venta de materiales de ferretería y construcción al mayor, así como al desarrollo de proyectos de ingeniería, remodelaciones y construcción de espacios pequeños y grandes a nivel nacional.</p>
-</section>
+    <!-- Menú de navegación -->
+    <nav class="apple-nav px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="logo-text-styled">@tamarindocell</span>
+            <a href="https://wa.me/58424543903" target="_blank" class="whatsapp-nav-btn">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </nav>
 
-<section id="servicios">
-<h2 class="section-title">Nuestros Servicios</h2>
-<div class="grid">
-<div class="card">
-<h3>Ingeniería y Construcción</h3>
-<p>Planificación y ejecución de obras civiles de pequeña y gran escala.</p>
-</div>
-<div class="card">
-<h3>Remodelaciones</h3>
-<p>Transformación de espacios residenciales, comerciales e industriales.</p>
-</div>
-<div class="card">
-<h3>Suministro Mayorista</h3>
-<p>Venta y distribución de materiales de construcción para proyectos nacionales.</p>
-</div>
-</div>
-</section>
+    <!-- Sección de bienvenida -->
+    <header class="pt-16 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="badge-trust mb-8">
+                <i class="fas fa-certificate text-blue-500"></i> Calidad Premium Garantizada
+            </div>
+            <h1 class="hero-title text-6xl md:text-8xl font-bold mb-8">
+                Tu iPhone ideal, <br>sin complicaciones.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-500 mb-12 font-light max-w-2xl mx-auto">
+                Especialistas en Apple para Barquisimeto. Equipos nuevos y seminuevos verificados.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-5">
+                <a href="#productos" class="btn-primary">Ver Catálogo</a>
+                <a href="https://wa.me/58424543903" target="_blank" class="bg-white border-2 border-black px-10 py-5 rounded-[18px] font-bold hover:bg-black hover:text-white transition-all">Cotizar Importación</a>
+            </div>
+        </div>
+    </header>
 
-<section id="galeria">
-<h2 class="section-title">Obras y Proyectos</h2>
-<div class="galeria">
-<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
-<img src="https://images.unsplash.com/photo-1590650046871-92c887180603">
-<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-<img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c">
-<img src="https://images.unsplash.com/photo-1590608897129-79da98d159ab">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-</div>
-</section>
+    <!-- Imagen principal del iPhone -->
+    <div class="max-w-6xl mx-auto mb-20 px-4">
+        <div class="rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
+            <img src="https://i.postimg.cc/sDJKg728/Apple-i-Phone-15-Pro-lineup-hero-230912-Full-Bleed-Image-jpg-large.jpg" alt="[Imagen de iPhone 15 Pro de alta calidad]" class="hero-img">
+        </div>
+    </div>
 
-<section id="materiales">
-<h2 class="section-title">Materiales que Comercializamos</h2>
-<ul>
-<li>Cemento</li>
-<li>Bloques</li>
-<li>Cabillas</li>
-<li>Tubos estructurales</li>
-<li>Pego y Mantoflex</li>
-<li>Arena y agregados</li>
-</ul>
-</section>
+    <!-- Catálogo de productos -->
+    <section id="productos" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold italic uppercase mb-12 text-center md:text-left">Catálogo</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Tarjeta de Equipos -->
+                <div class="product-card">
+                    <div class="img-container aspect-square">
+                        <img src="https://i.postimg.cc/vHvXZfmS/Apple-i-Phone-15-Pro-lineup-color-lineup-geo-230912-big-jpg-large.jpg" alt="[Equipos iPhone disponibles]" class="product-img">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2">Equipos</h4>
+                        <p class="text-gray-500 mb-6 italic">Disponibles desde el <strong>iPhone 11 hasta el 17 Pro Max</strong>.</p>
+                        <a href="https://wa.me/58424543903" target="_blank" class="btn-primary w-full">Consultar Precio</a>
+                    </div>
+                </div>
 
-<section id="cotizacion">
-<h2 class="section-title">Solicitar Cotización</h2>
-<div class="formulario">
-<form>
-<input type="text" placeholder="Nombre completo" required>
-<input type="email" placeholder="Correo electrónico" required>
-<textarea rows="5" placeholder="Describe tu proyecto o materiales requeridos"></textarea>
-<button>Enviar Solicitud</button>
-</form>
-</div>
-</section>
+                <!-- Tarjeta de Accesorios -->
+                <div class="product-card">
+                    <div class="img-container aspect-square">
+                        <img src="https://i.postimg.cc/Jz4xD0y6/61010-125888-Apple-Silicone-cases-in-fan-xl.jpg" alt="[Accesorios Apple originales]" class="product-img">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2">Accesorios</h4>
+                        <p class="text-gray-500 mb-6 italic">Silicon Cases de alta calidad y MagSafe.</p>
+                        <a href="https://wa.me/58424543903" target="_blank" class="btn-primary w-full">Ver Colores</a>
+                    </div>
+                </div>
 
-<section id="contacto">
-<h2 class="section-title">Contacto</h2>
-<p>📍 Barquisimeto, Estado Lara – Venezuela</p>
-<p>📧 ferrecami19@outlook.com</p>
-<p>📸 Instagram: <a href="https://www.instagram.com/ferrecami.19/" target="_blank">@ferrecami.19</a></p>
-</section>
+                <!-- Tarjeta de Cargadores -->
+                <div class="product-card">
+                    <div class="img-container aspect-square">
+                        <img src="https://i.postimg.cc/8CGfx6Tw/cargador.png" alt="[Cargador de iPhone original]" class="product-img">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2">Carga Rápida</h4>
+                        <p class="text-gray-500 mb-6 italic">Adaptador 20W USB-C Versión LATAM.</p>
+                        <a href="https://wa.me/58424543903" target="_blank" class="btn-primary w-full">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-<p>© 2025 FERRECAMI19 | Ingeniería Corporativa y Materiales de Construcción</p>
-</footer>
+    <!-- Sección de Importación Directa con iPhone 16 Rosado -->
+    <section id="importacion" class="py-24 px-6 bg-zinc-50 rounded-[50px] mx-4 mb-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Contenedor con la imagen del iPhone 16 Rosado en Ultra HD -->
+            <div class="max-w-4xl mx-auto mb-12 rounded-[40px] overflow-hidden shadow-xl border border-white bg-white">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-pink?wid=5120&hei=2880&fmt=webp&qlt=90&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4OUtONFJuV1pCdWVXaWp6ZXpQQi9FWXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUmJqTWwxUjR3emtKcFNGYngyU0EvOWU&traceId=1" 
+                     alt="[iPhone 16 Rosado en alta resolución]" 
+                     class="w-full h-auto object-cover">
+            </div>
+            
+            <h2 class="text-5xl md:text-7xl font-bold mb-8 italic uppercase">Importación Directa 🛬</h2>
+            <p class="text-xl text-gray-500 mb-10 leading-relaxed font-light max-w-2xl mx-auto">
+                Traemos tu equipo directamente de la Apple Store USA. <br>
+                <strong>Seguridad garantizada, factura a tu nombre y entrega en Barquisimeto.</strong>
+            </p>
+
+            <!-- Botón de contacto directo por WhatsApp -->
+            <div class="flex flex-col items-center gap-6">
+                <a href="https://wa.me/58424543903" target="_blank" class="btn-whatsapp-direct">
+                    <i class="fab fa-whatsapp"></i> Hablar con un Asesor ahora
+                </a>
+                <p class="text-sm text-gray-400">
+                    O haz clic aquí: <a href="https://wa.me/58424543903" target="_blank" class="text-blue-500 underline font-semibold">wa.me/tamarindocell</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Redes Sociales -->
+    <section id="redes" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10 italic uppercase">¡Síguenos en nuestras Redes!</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <!-- Botón de Instagram -->
+                <a href="https://www.instagram.com/tamarindocell?igsh=MWRzcnVuMXNtOHRzZw%3D%3D&utm_source=qr" 
+                   target="_blank" 
+                   class="flex items-center justify-center gap-4 px-10 py-5 rounded-[22px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-bold text-xl shadow-lg hover:scale-105 transition-all w-full md:w-auto">
+                    <i class="fab fa-instagram text-3xl"></i> Instagram
+                </a>
+                
+                <!-- Botón de TikTok -->
+                <a href="https://www.tiktok.com/@tamarindocell?_r=1&_d=f0g4lcijf7e427&sec_uid=MS4wLjABAAAA6fVMc5I_RKxrydSGNL8vlcpLxBLQzYb6KaXg_15dBqEjFieEv0PBIlNbmmaIArp3&share_author_id=7603553950034330642&sharer_language=es&source=h5_m&u_code=f1m347eci0dj42&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=4394FA73-1515-438A-BC25-2365BDBE3F13&user_id=7603553950034330642&sec_user_id=MS4wLjABAAAA6fVMc5I_RKxrydSGNL8vlcpLxBLQzYb6KaXg_15dBqEjFieEv0PBIlNbmmaIArp3&social_share_type=5&ug_btm=b8727,b0&utm_campaign=client_share&share_app_id=1233" 
+                   target="_blank" 
+                   class="flex items-center justify-center gap-4 px-10 py-5 rounded-[22px] bg-black text-white font-bold text-xl shadow-lg hover:scale-105 transition-all w-full md:w-auto">
+                    <i class="fab fa-tiktok text-3xl"></i> TikTok
+                </a>
+            </div>
+            <p class="mt-8 text-gray-400 font-medium">@tamarindocell</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-16 px-6 border-t border-zinc-100 text-center">
+        <div class="flex justify-center gap-10 mb-10 text-gray-400 text-3xl">
+            <a href="https://www.instagram.com/tamarindocell?igsh=MWRzcnVuMXNtOHRzZw%3D%3D&utm_source=qr" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@tamarindocell" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/58424543903" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">Tamarindo Cell © 2026</p>
+        <p class="text-[10px] text-gray-300">BARQUISIMETO • LARA • VENEZUELA</p>
+    </footer>
 
 </body>
 </html>
