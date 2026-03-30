@@ -3,380 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FERRECAMI19 | Constructora y Distribuidora Premium en Lara</title>
+    <title>Tamarindo Cell | Equipos Apple en Barquisimeto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
         
-        :root {
-            --primary-blue: #0a1931; /* Azul marino profundo */
-            --pure-black: #000000;
-            --pure-white: #ffffff;
-            --slate-gray: #64748b;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--pure-white);
-            color: var(--pure-black);
+            background-color: #ffffff;
+            color: #000000;
             scroll-behavior: smooth;
         }
 
-        .announcement-bar {
-            background-color: var(--primary-blue);
-            color: var(--pure-white);
-            font-size: 11px;
-            padding: 12px;
-            text-align: center;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-
-        .nav-fixed {
-            background: rgba(255, 255, 255, 0.98);
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            border-bottom: 2px solid var(--primary-blue);
-        }
-
-        .brand-container {
+        .logo-branding-bar {
+            background-color: #ffffff;
+            padding: 15px 0;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 12px;
+            border-bottom: 1px solid #f3f3f3;
         }
 
-        .company-logo {
-            height: 48px;
+        .main-brand-logo {
+            height: 60px;
             width: auto;
             object-fit: contain;
         }
 
-        .brand-text {
-            font-weight: 800;
+        .announcement-bar {
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 10px;
+            padding: 10px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .apple-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo-text-styled {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            text-transform: lowercase;
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        .hero-title {
+            line-height: 1.05;
             letter-spacing: -0.04em;
-            text-transform: uppercase;
-            font-size: 1.4rem;
-            color: var(--primary-blue);
         }
 
-        .hero-section {
-            background-color: var(--pure-white);
-            padding: 60px 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .btn-premium {
-            background: var(--primary-blue);
-            color: var(--pure-white);
-            padding: 18px 36px;
-            border-radius: 0;
-            font-weight: 800;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .btn-premium:hover {
-            background: var(--pure-black);
-            transform: translateY(-2px);
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3.2rem; }
         }
 
         .product-card {
-            background: var(--pure-white);
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid #efefef;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .product-card:hover {
-            border-color: var(--primary-blue);
-            box-shadow: 0 20px 40px rgba(10, 25, 49, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
         }
 
-        .service-icon-box {
-            width: 60px;
-            height: 60px;
-            background: #f1f5f9;
-            display: flex;
+        .btn-primary {
+            background: #000000;
+            color: #ffffff;
+            padding: 20px 36px;
+            border-radius: 18px;
+            font-weight: 700;
+            text-align: center;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn-whatsapp-direct {
+            background-color: #25D366;
+            color: white;
+            padding: 18px 32px;
+            border-radius: 16px;
+            font-weight: 700;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
         }
 
-        .status-badge {
-            background: #f1f5f9;
-            color: var(--primary-blue);
-            padding: 6px 14px;
-            font-size: 10px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .btn-whatsapp-direct:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+            background-color: #20ba5a;
         }
 
-        #error-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.85);
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .img-wrapper {
+        .img-container {
             position: relative;
-            background-color: #f8fafc;
+            background-color: #f5f5f7;
             overflow: hidden;
         }
 
-        .img-wrapper img {
+        .product-img, .hero-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
 
-        .hero-image-frame {
-            border: 15px solid #f8fafc;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        .badge-trust {
+            background: #f4f4f5;
+            color: #18181b;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        .instagram-link-blue {
-            color: var(--primary-blue);
-            font-weight: 700;
-            transition: opacity 0.3s;
-        }
-        
-        .instagram-link-blue:hover {
-            opacity: 0.7;
+
+        .whatsapp-nav-btn {
+            background-color: #25D366;
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.3rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Modal de error temporal -->
-    <div id="error-modal" onclick="closeModal()">
-        <div class="bg-white p-12 max-w-md w-full rounded-none border-t-[10px] border-blue-900 text-center shadow-2xl" onclick="event.stopPropagation()">
-            <i class="fas fa-tools text-slate-200 text-6xl mb-6"></i>
-            <h3 class="text-2xl font-black mb-4 uppercase text-slate-900">Enlace en Mantenimiento</h3>
-            <p class="text-slate-500 mb-8 leading-relaxed">Estamos configurando nuestra línea de atención directa. Por favor, contáctenos vía Instagram @ferrecami.19 o visítenos en el Estado Lara.</p>
-            <div class="flex flex-col gap-4">
-                <a href="https://www.instagram.com/ferrecami.19/" target="_blank" class="bg-slate-900 text-white py-4 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2">
-                    <i class="fab fa-instagram text-lg"></i> Ir a @ferrecami.19
-                </a>
-                <button onclick="closeModal()" class="text-[10px] font-bold uppercase text-slate-400 hover:text-slate-900">Cerrar</button>
-            </div>
-        </div>
+    <!-- Logotipo principal -->
+    <div class="logo-branding-bar">
+        <img src="https://i.postimg.cc/KKhsvW18/Whats-App-Image-2026-02-24-at-12-29-39-PM.jpg" alt="[Logotipo de Tamarindo Cell]" class="main-brand-logo">
     </div>
 
-    <!-- Barra Superior -->
+    <!-- Barra de anuncios -->
     <div class="announcement-bar">
-        CONSTRUCTORA E INSTALADORA • DISTRIBUIDOR DE MATERIALES • ESTADO LARA
+        📦 Envíos a toda Venezuela • Delivery en Barquisimeto y Cabudare
     </div>
 
-    <!-- Navegación -->
-    <nav class="nav-fixed px-8 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="brand-container">
-                <img src="https://i.ibb.co/Xk5dQTww/5-E9-EEC4-C-1-A48-4852-AF59-63-ACDAC5-D8-CF.png" alt="FERRECAMI19 Logo" class="company-logo">
-                <span class="brand-text">FERRECAMI19</span>
+    <!-- Menú de navegación -->
+    <nav class="apple-nav px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="logo-text-styled">@tamarindocell</span>
+            <a href="https://wa.me/58424543903" target="_blank" class="whatsapp-nav-btn">
+                <i class="fab fa-whatsapp"></i>
             </a>
-            <div class="hidden lg:flex gap-12 font-bold text-[11px] uppercase tracking-[0.2em] text-slate-500">
-                <a href="#servicios" class="hover:text-blue-900 transition-colors">Servicios</a>
-                <a href="#productos" class="hover:text-blue-900 transition-colors">Portafolio</a>
-                <a href="https://www.instagram.com/ferrecami.19/" target="_blank" class="instagram-link-blue flex items-center gap-2">
-                    <i class="fab fa-instagram text-lg"></i> @ferrecami.19
-                </a>
-            </div>
-            <div class="flex items-center gap-6">
-                <button onclick="showError()" class="text-slate-900 text-2xl hover:text-blue-900">
-                    <i class="fab fa-whatsapp"></i>
-                </button>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-block px-4 py-1 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                    Constructora & Suministros • Lara
-                </div>
-                <h1 class="text-5xl md:text-7xl font-black leading-[0.95] mb-8 text-slate-900 uppercase">
-                    SOLUCIONES <br><span class="text-blue-900">INTEGRALES</span> <br>DE OBRA.
-                </h1>
-                <p class="text-lg text-slate-500 mb-10 leading-relaxed max-w-md">
-                    Especialistas en construcción a pequeña y mediana escala, mantenimiento preventivo e instalaciones técnicas con materiales de primera.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <button onclick="showError()" class="btn-premium">Solicitar Servicio</button>
-                    <a href="https://www.instagram.com/ferrecami.19/" target="_blank" class="flex items-center gap-3 border-2 border-slate-900 px-8 py-4 font-black uppercase text-[11px] tracking-widest hover:bg-slate-900 hover:text-white transition-all">
-                        <i class="fab fa-instagram text-lg"></i> Ver Trabajos
-                    </a>
-                </div>
+    <!-- Sección de bienvenida -->
+    <header class="pt-16 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="badge-trust mb-8">
+                <i class="fas fa-certificate text-blue-500"></i> Calidad Premium Garantizada
             </div>
-            <div class="relative">
-                <div class="hero-image-frame overflow-hidden">
-                    <img src="https://forprojectpros.com/wp-content/uploads/2023/04/constructoras-en-Venezuela.jpg" 
-                         alt="[Proyectos de construcción en Venezuela]" 
-                         class="w-full h-auto grayscale-[0.2] hover:grayscale-0 transition-all duration-1000">
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-blue-900 text-white p-8 hidden lg:block">
-                    <p class="text-2xl font-black italic">MANTENIMIENTO</p>
-                    <p class="text-[9px] font-bold uppercase tracking-widest">Ejecución Profesional</p>
-                </div>
+            <h1 class="hero-title text-6xl md:text-8xl font-bold mb-8">
+                Tu iPhone ideal, <br>sin complicaciones.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-500 mb-12 font-light max-w-2xl mx-auto">
+                Especialistas en Apple para Barquisimeto. Equipos nuevos y seminuevos verificados.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-5">
+                <a href="#productos" class="btn-primary">Ver Catálogo</a>
+                <a href="https://wa.me/58424543903" target="_blank" class="bg-white border-2 border-black px-10 py-5 rounded-[18px] font-bold hover:bg-black hover:text-white transition-all">Cotizar Importación</a>
             </div>
         </div>
     </header>
 
-    <!-- Sección de Servicios Especializados -->
-    <section id="servicios" class="py-24 px-8 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <h2 class="text-3xl font-black uppercase tracking-tighter text-slate-900 mb-4">Nuestras Capacidades</h2>
-            <div class="w-16 h-1 bg-blue-900 mx-auto"></div>
+    <!-- Imagen principal del iPhone -->
+    <div class="max-w-6xl mx-auto mb-20 px-4">
+        <div class="rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
+            <img src="https://i.postimg.cc/sDJKg728/Apple-i-Phone-15-Pro-lineup-hero-230912-Full-Bleed-Image-jpg-large.jpg" alt="[Imagen de iPhone 15 Pro de alta calidad]" class="hero-img">
         </div>
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div>
-                    <div class="service-icon-box"><i class="fas fa-building"></i></div>
-                    <h3 class="text-xl font-black uppercase mb-4 tracking-tight">Construcción P&M</h3>
-                    <p class="text-slate-500 text-sm leading-loose">Ejecución de obras civiles a pequeña y mediana escala con estándares de calidad industrial y cumplimiento de tiempos.</p>
-                </div>
-                <div>
-                    <div class="service-icon-box"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-xl font-black uppercase mb-4 tracking-tight">Mantenimiento Pro</h3>
-                    <p class="text-slate-500 text-sm leading-loose">Planes de mantenimiento preventivo y correctivo para infraestructuras comerciales, residenciales e industriales.</p>
-                </div>
-                <div>
-                    <div class="service-icon-box"><i class="fas fa-lightbulb"></i></div>
-                    <h3 class="text-xl font-black uppercase mb-4 tracking-tight">Iluminación Téc.</h3>
-                    <p class="text-slate-500 text-sm leading-loose">Instalación de sistemas de iluminación LED de alta potencia para áreas deportivas, industriales y comerciales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Portafolio de Suministros y Ejecución -->
-    <section id="productos" class="py-24 px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <div class="max-w-2xl">
-                    <h2 class="text-4xl font-black uppercase tracking-tighter text-slate-900 mb-4">Portafolio de Especialidades</h2>
-                    <div class="w-20 h-2 bg-blue-900"></div>
-                </div>
-                <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.3em]">Distribución y Obra Lara</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Cemento / Concreto -->
+    <!-- Catálogo de productos -->
+    <section id="productos" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold italic uppercase mb-12 text-center md:text-left">Catálogo</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Tarjeta de Equipos -->
                 <div class="product-card">
-                    <div class="img-wrapper aspect-[4/3]">
-                        <img src="https://www.munisocabaya.gob.pe/wp-content/uploads/2020/08/7.jpeg" alt="[Suministro de concreto]">
+                    <div class="img-container aspect-square">
+                        <img src="https://i.postimg.cc/vHvXZfmS/Apple-i-Phone-15-Pro-lineup-color-lineup-geo-230912-big-jpg-large.jpg" alt="[Equipos iPhone disponibles]" class="product-img">
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <span class="status-badge">Suministro</span>
-                        <h4 class="text-lg font-black mt-4 mb-4 uppercase">Mezclas y Agregados</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-6 flex-grow">Cemento certificado para fundaciones y muros de carga estructural.</p>
-                        <button onclick="showError()" class="w-full py-3 border-2 border-slate-900 text-slate-900 font-black uppercase text-[9px] tracking-widest hover:bg-slate-900 hover:text-white transition-all">Cotizar</button>
-                    </div>
-                </div>
-
-                <!-- Acero -->
-                <div class="product-card">
-                    <div class="img-wrapper aspect-[4/3]">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_710561-MLV76702411961_052024-T.webp" alt="[Cabillas estriadas]">
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <span class="status-badge">Refuerzo</span>
-                        <h4 class="text-lg font-black mt-4 mb-4 uppercase">Acero Estructural</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-6 flex-grow">Cabillas grado 60 y perfiles metálicos para refuerzo de infraestructuras.</p>
-                        <button onclick="showError()" class="w-full py-3 border-2 border-slate-900 text-slate-900 font-black uppercase text-[9px] tracking-widest hover:bg-slate-900 hover:text-white transition-all">Consultar</button>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2">Equipos</h4>
+                        <p class="text-gray-500 mb-6 italic">Disponibles desde el <strong>iPhone 11 hasta el 17 Pro Max</strong>.</p>
+                        <a href="https://wa.me/58424543903" target="_blank" class="btn-primary w-full">Consultar Precio</a>
                     </div>
                 </div>
 
-                <!-- Iluminación (NUEVA SECCIÓN) -->
+                <!-- Tarjeta de Accesorios -->
                 <div class="product-card">
-                    <div class="img-wrapper aspect-[4/3]">
-                        <img src="https://es.zgsm-china.com/wp-content/uploads/2022/01/Basketball-Court-Lighting.jpg" alt="[Instalaciones de luminarias deportivas]">
+                    <div class="img-container aspect-square">
+                        <img src="https://i.postimg.cc/Jz4xD0y6/61010-125888-Apple-Silicone-cases-in-fan-xl.jpg" alt="[Accesorios Apple originales]" class="product-img">
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <span class="status-badge">Instalación</span>
-                        <h4 class="text-lg font-black mt-4 mb-4 uppercase">Iluminación Pro</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-6 flex-grow">Instalación de luminarias de alta eficiencia para complejos deportivos e industria.</p>
-                        <button onclick="showError()" class="w-full py-3 border-2 border-slate-900 text-slate-900 font-black uppercase text-[9px] tracking-widest hover:bg-slate-900 hover:text-white transition-all">Solicitar</button>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2">Accesorios</h4>
+                        <p class="text-gray-500 mb-6 italic">Silicon Cases de alta calidad y MagSafe.</p>
+                        <a href="https://wa.me/58424543903" target="_blank" class="btn-primary w-full">Ver Colores</a>
                     </div>
                 </div>
 
-                <!-- Andamios -->
+                <!-- Tarjeta de Cargadores -->
                 <div class="product-card">
-                    <div class="img-wrapper aspect-[4/3]">
-                        <img src="https://www.comercturro.com/blog/documentos/ImagenesArticulos/principales/partes-andamio.jpg" alt="[Andamios para mantenimiento]">
+                    <div class="img-container aspect-square">
+                        <img src="https://i.postimg.cc/8CGfx6Tw/cargador.png" alt="[Cargador de iPhone original]" class="product-img">
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <span class="status-badge">Mantenimiento</span>
-                        <h4 class="text-lg font-black mt-4 mb-4 uppercase">Andamios y Equipos</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-6 flex-grow">Sistemas de andamiaje y equipos para instalaciones técnicas en altura.</p>
-                        <button onclick="showError()" class="w-full py-3 border-2 border-slate-900 text-slate-900 font-black uppercase text-[9px] tracking-widest hover:bg-slate-900 hover:text-white transition-all">Ver Más</button>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2">Carga Rápida</h4>
+                        <p class="text-gray-500 mb-6 italic">Adaptador 20W USB-C Versión LATAM.</p>
+                        <a href="https://wa.me/58424543903" target="_blank" class="btn-primary w-full">Comprar ahora</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-24 px-8 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-4 mb-8">
-                        <img src="https://i.ibb.co/Xk5dQTww/5-E9-EEC4-C-1-A48-4852-AF59-63-ACDAC5-D8-CF.png" alt="Logo" class="h-10 w-auto">
-                        <span class="brand-text text-xl">FERRECAMI19</span>
-                    </div>
-                    <p class="text-slate-500 text-sm leading-loose max-w-sm">
-                        Constructora e Instaladora líder en Lara. Expertos en ejecución de obras civiles, iluminación técnica y mantenimiento.
-                    </p>
-                </div>
-                <div>
-                    <h6 class="font-black text-xs uppercase mb-8 tracking-widest text-slate-900">Instagram Oficial</h6>
-                    <a href="https://www.instagram.com/ferrecami.19/" target="_blank" class="instagram-link-blue text-xs flex items-center gap-2">
-                         <i class="fab fa-instagram"></i> @ferrecami.19
-                    </a>
-                </div>
-                <div>
-                    <h6 class="font-black text-xs uppercase mb-8 tracking-widest text-slate-900">Ubicación Central</h6>
-                    <p class="text-slate-500 text-[11px] uppercase leading-loose font-bold italic text-blue-900 tracking-wider">ESTADO LARA<br>VENEZUELA</p>
-                </div>
+    <!-- Sección de Importación Directa con iPhone 16 Rosado -->
+    <section id="importacion" class="py-24 px-6 bg-zinc-50 rounded-[50px] mx-4 mb-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Contenedor con la imagen del iPhone 16 Rosado en Ultra HD -->
+            <div class="max-w-4xl mx-auto mb-12 rounded-[40px] overflow-hidden shadow-xl border border-white bg-white">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-pink?wid=5120&hei=2880&fmt=webp&qlt=90&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4OUtONFJuV1pCdWVXaWp6ZXpQQi9FWXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUmJqTWwxUjR3emtKcFNGYngyU0EvOWU&traceId=1" 
+                     alt="[iPhone 16 Rosado en alta resolución]" 
+                     class="w-full h-auto object-cover">
             </div>
-            <div class="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                <span class="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em]">FERRECAMI19 © 2026 • RIF: J-00000000-0</span>
-                <div class="flex gap-8">
-                    <a href="https://www.instagram.com/ferrecami.19/" target="_blank" class="text-slate-400 hover:text-blue-900 transition-colors text-xl"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-blue-900 transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+            
+            <h2 class="text-5xl md:text-7xl font-bold mb-8 italic uppercase">Importación Directa 🛬</h2>
+            <p class="text-xl text-gray-500 mb-10 leading-relaxed font-light max-w-2xl mx-auto">
+                Traemos tu equipo directamente de la Apple Store USA. <br>
+                <strong>Seguridad garantizada, factura a tu nombre y entrega en Barquisimeto.</strong>
+            </p>
+
+            <!-- Botón de contacto directo por WhatsApp -->
+            <div class="flex flex-col items-center gap-6">
+                <a href="https://wa.me/58424543903" target="_blank" class="btn-whatsapp-direct">
+                    <i class="fab fa-whatsapp"></i> Hablar con un Asesor ahora
+                </a>
+                <p class="text-sm text-gray-400">
+                    O haz clic aquí: <a href="https://wa.me/58424543903" target="_blank" class="text-blue-500 underline font-semibold">wa.me/tamarindocell</a>
+                </p>
             </div>
         </div>
+    </section>
+
+    <!-- Sección de Redes Sociales -->
+    <section id="redes" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10 italic uppercase">¡Síguenos en nuestras Redes!</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <!-- Botón de Instagram -->
+                <a href="https://www.instagram.com/tamarindocell?igsh=MWRzcnVuMXNtOHRzZw%3D%3D&utm_source=qr" 
+                   target="_blank" 
+                   class="flex items-center justify-center gap-4 px-10 py-5 rounded-[22px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-bold text-xl shadow-lg hover:scale-105 transition-all w-full md:w-auto">
+                    <i class="fab fa-instagram text-3xl"></i> Instagram
+                </a>
+                
+                <!-- Botón de TikTok -->
+                <a href="https://www.tiktok.com/@tamarindocell?_r=1&_d=f0g4lcijf7e427&sec_uid=MS4wLjABAAAA6fVMc5I_RKxrydSGNL8vlcpLxBLQzYb6KaXg_15dBqEjFieEv0PBIlNbmmaIArp3&share_author_id=7603553950034330642&sharer_language=es&source=h5_m&u_code=f1m347eci0dj42&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=4394FA73-1515-438A-BC25-2365BDBE3F13&user_id=7603553950034330642&sec_user_id=MS4wLjABAAAA6fVMc5I_RKxrydSGNL8vlcpLxBLQzYb6KaXg_15dBqEjFieEv0PBIlNbmmaIArp3&social_share_type=5&ug_btm=b8727,b0&utm_campaign=client_share&share_app_id=1233" 
+                   target="_blank" 
+                   class="flex items-center justify-center gap-4 px-10 py-5 rounded-[22px] bg-black text-white font-bold text-xl shadow-lg hover:scale-105 transition-all w-full md:w-auto">
+                    <i class="fab fa-tiktok text-3xl"></i> TikTok
+                </a>
+            </div>
+            <p class="mt-8 text-gray-400 font-medium">@tamarindocell</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-16 px-6 border-t border-zinc-100 text-center">
+        <div class="flex justify-center gap-10 mb-10 text-gray-400 text-3xl">
+            <a href="https://www.instagram.com/tamarindocell?igsh=MWRzcnVuMXNtOHRzZw%3D%3D&utm_source=qr" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@tamarindocell" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/58424543903" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">Tamarindo Cell © 2026</p>
+        <p class="text-[10px] text-gray-300">BARQUISIMETO • LARA • VENEZUELA</p>
     </footer>
-
-    <script>
-        function showError() {
-            document.getElementById('error-modal').style.display = 'flex';
-        }
-        function closeModal() {
-            document.getElementById('error-modal').style.display = 'none';
-        }
-    </script>
 
 </body>
 </html>
